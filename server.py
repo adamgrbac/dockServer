@@ -8,5 +8,5 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         super().__init__(*args, directory="server", **kwargs)
 
 with socketserver.TCPServer(("",PORT), Handler) as httpd:
-    print("Serving at port: ", PORT)
+    print("Serving you at port: ", PORT)
     httpd.serve_forever()
